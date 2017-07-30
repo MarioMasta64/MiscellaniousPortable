@@ -6,10 +6,9 @@ title Download All The Links
 for /f "delims=" %%i in ('dir /b /s /a-d ^| findstr /i "*.pkg"') do del "%%~i"
 
 echo type local to use a local links.txt file
-echo make sure the url ends with a /
-echo do not include the word zeuslinks.txt
-set /p domain="enter the url to download zeuslinks.txt from: "
-if "%domain%"=="local" goto Download
+echo make sure the url ends with a zeuslinks.txt
+set /p url="enter the url to download zeuslinks.txt from: "
+if "%url%"=="local" goto Download
 
 if not exist wget.exe cscript downloadwget.vbs
 
@@ -17,7 +16,7 @@ cls
 title Downloading File
 if exist zeuslinks.txt.bak del zeuslinks.txt.bak
 :: -m to clone entire directory up to it
-wget.exe -q --show-progress --user-agent="Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Chrome/6.0.472.63 Safari/534.3" %domain%/zeuslinks.txt
+wget.exe -q --show-progress --user-agent="Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Chrome/6.0.472.63 Safari/534.3" %url%
 if exist zeuslinks.txt.1 rename zeuslinks.txt zeuslinks.txt.bak
 if exist zeuslinks.txt.bak rename zeuslinks.txt.1 zeuslinks.txt
 
