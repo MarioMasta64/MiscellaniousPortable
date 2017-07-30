@@ -1,0 +1,2 @@
+ipconfig /flushdns
+goto eof

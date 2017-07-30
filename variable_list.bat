@@ -1,0 +1,1 @@
+set > found_variables_%COMPUTERNAME%.txt

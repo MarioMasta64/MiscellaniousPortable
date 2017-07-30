@@ -1,0 +1,1 @@
+http://stackoverflow.com/questions/43104662/i-need-a-format-of-code-that-only-counts-odd-lines

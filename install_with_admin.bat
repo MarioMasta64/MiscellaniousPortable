@@ -1,0 +1,1 @@
+SteamSetup.exe /NCRC /S /D=%CD%\bin\Steam
